@@ -62,7 +62,7 @@ $(function() {
 	    // create a DOM element for the marker
 	    var el = document.createElement('div');
 	    el.className = 'marker';
-	    el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_small_60.jpg)';
+	    el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_60.png)';
 	    el.style.width = marker.properties.iconSize[0] + 'px';
 	    el.style.height = marker.properties.iconSize[1] + 'px';
 
