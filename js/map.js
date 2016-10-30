@@ -1,36 +1,80 @@
 $(function() {
 
-	/*
-	var accessToken = 'pk.eyJ1IjoiY29tdW5lZ2lvaWEiLCJhIjoiY2lyM2N1MzVkMDAxZWhzbnFka3IzcW8xNiJ9.01RuiMkZJs1XwEwMLOZLDw';
-	var mapbox_url = 'https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token="' + accessToken + '"';
-
-	var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
-    	denver    = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
-    	aurora    = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
-    	golden    = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
-
-    var cities = L.layerGroup([littleton, denver, aurora, golden]);
-
-	var base = L.tileLayer(mapbox_url, {
-	    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-	    maxZoom: 18,
-    	id: 'your.mapbox.project.id',
-    	accessToken: accessToken
-	});
-
-	var mymap = L.map('mapid', {
-	    center: [39.73, -104.99],
-	    zoom: 10,
-	    layers: [base, cities]
-	});
-	*/
-
 	var center = [40.8030459,16.9299694];
 
+	var gioia = [16.9299694, 40.8030459];
+	var valenzano = [16.8666082, 41.0458656];
+
+	/*
 	var map = L.Mapzen.map('map');
-  	// Set the center of the map to be the San Francisco Bay Area at zoom level 12
   	map.setView(center, 8);
 
+  	var geojsonFeature = {
+	    "type": "Feature",
+	    "properties": {
+	        "name": "Gioia del Clle",
+	        "amenity": "Nodo Antenna PON",
+	        "popupContent": "This is where the Rockies play!"
+	    },
+	    "geometry": {
+	        "type": "Point",
+	        "coordinates": center
+	    }
+	};
+	*/
+
+	mapboxgl.accessToken = 'pk.eyJ1IjoiY29tdW5lZ2lvaWEiLCJhIjoiY2lyM2N1MzVkMDAxZWhzbnFka3IzcW8xNiJ9.01RuiMkZJs1XwEwMLOZLDw';
+	
+	var map = new mapboxgl.Map({
+	    container: 'map',
+	    style: 'mapbox://styles/mapbox/light-v9',
+	    center: gioia,
+	    zoom: 6
+	});
+
+	var geojson = {
+        "type": "FeatureCollection",
+        "features": [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": gioia
+            },
+            "properties": {
+                "title": "Gioia del Colle",
+                "iconSize": [60,60]
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": valenzano
+            },
+            "properties": {
+                "title": "Valenzano",
+                "iconSize": [48,48]
+            }
+        }]
+    };
+
+    // add markers to map
+	geojson.features.forEach(function(marker) {
+	    // create a DOM element for the marker
+	    var el = document.createElement('div');
+	    el.className = 'marker';
+	    el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_small_60.jpg)';
+	    el.style.width = marker.properties.iconSize[0] + 'px';
+	    el.style.height = marker.properties.iconSize[1] + 'px';
+
+	    el.addEventListener('click', function() {
+	        window.alert(marker.properties.title);
+	    });
+
+	    // add marker to map
+	    new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
+	        .setLngLat(marker.geometry.coordinates)
+	        .addTo(map);
+	});
 
 
 });
