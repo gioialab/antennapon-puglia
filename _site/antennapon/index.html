@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Rete Antenna PON</title>
+
+  <meta name="author" content="Some Person" />
+
+  
+  <meta name="description" content="Vademecum per i punti informativi comunali in ricerca e innovazione.">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Rete Antenna PON Puglia - Rete dei Comuni di Antenna PON" href="/feed.xml" />
+
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+      <link rel="stylesheet" href="/css/leaflet.css" />
+    
+      <link rel="stylesheet" href="/css/map.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+  <meta property="fb:app_id" content="" />
+  
+
+  
+  <meta property="og:title" content="Rete Antenna PON" />
+  
+
+   
+  <meta property="og:description" content="Vademecum per i punti informativi comunali in ricerca e innovazione.">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="/antennapon/" />
+  <link rel="canonical" href="/antennapon/" />
+  
+
+  
+  <meta property="og:image" content="/img/logo-antenna-pon-white.png" />
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@yourname" />
+  <meta name="twitter:creator" content="@yourname" />
+
+  
+  <meta name="twitter:title" content="Rete Antenna PON" />
+  
+
+  
+  <meta name="twitter:description" content="Vademecum per i punti informativi comunali in ricerca e innovazione.">
+  
+
+  
+  <meta name="twitter:image" content="/img/logo-antenna-pon-white.png" />
+  
+
+  <link rel="stylesheet" href="https://mapzen.com/js/mapzen.css">
+
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Rete Antenna PON Puglia</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/antennapon">Cos'è</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Rete</a>
+            <div class="navlinks-children">
+              
+                
+                  
+            
+
+
+
+
+
+<a href="http://gioialab.github.io">Gioia del Colle</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Gravina</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Rutigliano</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Andria</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Noci</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Melpignano</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Gallipoli</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Statte</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Laterza</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Grottaglie</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Mesagne</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Brindisi</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Modugno</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Cisternino</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Bitonto</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Valenzano</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Bari</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Sannicandro</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Acquaviva delle Fonti</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Molfetta</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Barletta</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Rocchetta Sant'Antonio</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Manfredonia</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Poggio Imperiale</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Troia</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Pietramontecorvino</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Orsara di Puglia</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Ascoli Satriano</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Città Metropolitana di Bari</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Gal Colline Ioniche</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/">Gal Città di Andria</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="http://www.ponrec.it/ponri/">Antenna PON</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/blog">Blog</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href=" ">
+	      <img class="avatar-img" src="/img/logo-antenna-pon-white.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Rete Antenna PON</h1>
+		  
+		    
+            <hr class="small">
+            <span class="page-subheading">Vademecum per i punti informativi comunali in ricerca e innovazione.</span>
+			
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      
+      <p>Vademecum per i punti informativi comunali in ricerca e innovazione, il coordinamento della Città metropolitana e di Area Vasta , il Tavolo regionale della Antenna PON.</p>
+
+<p>Servizi, attività e funzioni della organizzazione del Progetto Rete della Antenna pon in Ricerca e Innovazione 2014 2020 nell’ambito del programma nazionale del MIUR (in particolare il documento sulla Strategia della comunicazione – CdS di Febbraio 2016)</p>
+
+<h2 id="il-progetto---rete-2020">Il Progetto - Rete 2020</h2>
+<p>I punti  comunali in ricerca e innovazione sono costituenti l’antenna pon regionale come nodo in ricerca e innovazione fondata sui comuni  voluto dal progetto –rete dei punti informativi  delle antenne pon del programma ricerca e innovazione 2014-2020 del MIUR che ha l’obiettivo di costruire nelle 8 regioni del mezzogiorno i nodi delle antenne pon per la definitiva implementazione alla  rete nazionale.
+L’iniziativa del progetto Rete prevede a monte un accordo pon/por che sarà lanciato a breve fra le 8 regioni dell’obiettivo del programma e che vedrà convocati i responsabili regionali delle 4 antenne pon afferenti al programma da PON REC 2007-2013  da cui si è traslata la buona pratica.</p>
+
+<p>L’accordo e le successive determinazioni serviranno a stabilire quali politiche pubbliche potranno essere rese attive attraverso i punti di informazione in ricerca e innovazione, i laboratori della innovazione, la rete regionale dei punti informativi e dei laboratori.
+Il progetto rete 2014 2020 prevede l’istituzione di un soggetto regionale o sub regionale che coordini e amministri  tutti i punti informativi della rete aderenti al progetto rete attraverso una convenzione ex art 30 del Tuel.</p>
+
+<p>Tale soggetto istituzionale sarà di supporto ad attuare le politiche pubbliche in ricerca e innovazione in stretta sintonia con il MIUR , l’adg del PON RI, la AdG dela Regione Puglia e le sue agenzie regionali(ARTI, Innovapuglia, Pugliasviluppo)</p>
+
+<p>Il progetto rete sarà oggetto di sostegno da parte del pon e del por sulla base di servizi nazionali e regionali che saranno attivati e di  programmi (attività) che saranno proposti nell’ambito degli accordi pon por dalle reti regionali.</p>
+
+<p>Ongi punto di informazione comunale ha autonomia organizzativa e gestionale nel senso che autodetermina la sua attività e obiettivi della partecipazione attiva, fermo restando che sarà cura del tavolo regionale del comitato guida l’allineamento delle sperienze e la loro veicolazione sia a livello regionale che sovra regionale e nazionale.
+In puglia , dopo l’assemblea dei sindaci e amministratori locali del 28 luglio c.a. presso la Città Metropolitana di Bari si  è proposto di andare verso una unica associazione fra comuni con un  coordinamento da definire nella prossima riunione prevista entro novembre 2016 ( o comunque in coerenza con quanto sarà definito nell’incontro PON/POR).</p>
+
+<h2 id="cosa-fanno-i-punti-di-informazione-comunali-2020">Cosa fanno i punti di informazione comunali 2020</h2>
+<p>I punti di informazione comunali sono  luoghi dove si incontrano i cittadini singoli o associati, le imprese, il mondo della ricerca per divulgare le opportunità e definire bisogni e iniziative che potranno essere candidabili attraverso una progettualità aperta e condivisa ai fondi strutturali.</p>
+
+<p>I temi del <strong>PON RI</strong>, gli obiettivi della S3 nazionale e regionale, le altre iniziative previste dai PON nazionali (pon metro, pon competitività e impresa, il pon scuola, pon governance) e dai POR regionali sui temi della ricerca e innovazione sono gli argomenti sui quali lavorare insieme e creare partecipazione attiva e co-design.
+I punti informatvi possono alimentare una partecipazione e una attività pubblica di valenza sociale e culturale fondamentale per la trasparenza, l’efficacia e l’efficenza nonché per la qualità che è possibile introdurre nelle comunità e sui territori ,nella pubblica ammnistrazione, in stretto rapporto con la Regione e con lo Stato.
+I punti di informazione comunale dovranno prevedere ( cosi come indicato dal programma operativo del progetto rete delle antenne pon)  un <strong>set minimo di attrezzature e di risorse</strong> che passiamo così definire:</p>
+
+<ul>
+  <li>Sede attrezzata per incontri presso il comune o sedi comunali (accessibile e dotata di connessione)</li>
+  <li>Una <strong>risorsa amministrativa</strong> dedicata a seguire gli iter amministrativi e gli incontri istituzionali</li>
+  <li>Una <strong>risorsa istituzionale</strong> dedicata agli incontri di carattere  istituzionale</li>
+  <li>Azioni di informazioni sui social o attraverso  media o comunicazione off-line e on-line</li>
+  <li>Eventuali altre risorse umane  da dedicare alla co- progettazione</li>
+  <li>Link del comune sul punto informativo comunale (connesso alla rete regionale e al sito nazionale del PON-RI)</li>
+  <li>Eventuali azioni ad hoc finalizzati al coinvolgimento in occasione di particolari eventi nazionali regionali comunitari e locali ( notte bianca della ricerca , giornate europee a tema, ecc.)</li>
+</ul>
+
+<p>Ogni <em>tavolo tecnico</em> promosso dal punto informativo del comune in partecipazione attiva <em>(Laboratori della Innovazione)</em> produrrà report e definirà nel percorso proposte e progetti che saranno poste in condivisone dei social messi a disposizione dei servizi nazionali e regionali e locali.</p>
+
+<p>Sarà costituito un <strong>comitato di valutazione ex ante ed ex post</strong> con il compito di offrire una analisi sulle proposte e sui risultati della ricerca e dei processi di innovazione in cui partecipano gli attori della quadrupla elica.</p>
+
+<p><strong>I punti locali promuovono</strong> :
+* Attività di formazione per gli operatori locali
+* Cultura d’impresa vero le imprese e le scuole.
+* Attività di accompagnamento per la partecipazione
+* Attività di progettazione in co-design</p>
+
+<h2 id="gli-enti-di-coordinamento-come-la-citt-metropolitana-e-le-aree-vaste">Gli enti di coordinamento come la Città metropolitana e le Aree vaste</h2>
+
+<p>Gli enti di coordinamento riconosciute nell’ordinamento statale o in via ri-definizione, atteso che è auspicabile avere enti sovra comunali che possano concertare azioni e politiche condivise dagli enti locali, hanno il compito di definire politiche di indirizzo e di coordinamento al fine di ottimizzare la domanda di ricerca e innovazione della pubblica amministrazione, delle imprese e dei cittadini orientandole verso un maggior impatto sui territori con il compito di verificarne il pronostico di utilità e di efficacia ex ante ed ex post.</p>
+
+<h2 id="gli-accordi-di-partenariato-orizzontali">Gli accordi di partenariato orizzontali</h2>
+<p>Ogni punto di informazione può favorire accordi con i partner per l’attuazione della pratica di partecipazione attiva come le università e i suoi dipartimenti, i centri di ricerca pubblica e privata  , le associazioni di categoria, le associazioni di interesse e di territorio, per costituire i <strong>LABORATORI DELLA INNOVAZIONE</strong> .</p>
+
+<p>Questi accordi di  cooperazione ,in applicazione dell’accordo verticale interistituzionale, saranno fondamentali al fine di dare operatività ai tavoli locali di lavoro nella costruzione in co design della attività di informazione e di  proposta e di progetto.</p>
+
+<p><strong>‘Sono l’attuazione delle quadrupla elica’.</strong></p>
+
+<p>Tavoli settoriali contribuiranno a costruire  una visione complessa e olistica che trova sintesi nella capacity building della comunità  e della amministrazione, rappresentata dal comune che dovrà tenere insieme e restituire un programma di sviluppo e crescita.</p>
+
+<h2 id="cosa-fanno-le-associazioni-territoriali-e-locali">Cosa fanno le associazioni territoriali e locali</h2>
+<p>E’ auspicabile che la sussidiarietà (auspicata dall’ordinamento nazionale e regionale) trovi applicazione concreta attraverso una partecipazione delle associazioni di interesse  e territoriali come relazione più prossima al cittadino per  dare un contributo a rendere attuabile una pratica e un percorso partecipato e condiviso, nelle sue diverse  fasi di attuazione.</p>
+
+<p>Hanno il compito di favorire  e saranno di supporto alle politiche pubbliche per:
+* Favorire l’innovazione sociale
+* Favorire l’inclusione sociale
+* Favorire la smart communities</p>
+
+<h2 id="cosa-fanno-le-associazioni-di-categoria">Cosa fanno le Associazioni di categoria</h2>
+
+<p>Le associazioni  rappresentano il sistema delle imprese hanno il compito di favorire :
+* La cultura di impresa
+* Le Reti di impresa e relativa formazione e accompagnamento
+* Connessioni fra ricerca e impresa: per nuovi cluster di ricerca e innovazione
+* Mettono a disposizione specialismi e professionalità  per favorire l’innovazione
+* Giovani donne e impresa: laboratori per l’innovazione e acceleratori d’impresa</p>
+
+<h2 id="cosa-fa-luniversit-e-la--ricerca">Cosa fa l’Università e la  Ricerca</h2>
+<p>Le università, il politecnico, i centri di ricerca pubblici e privati saranno collaborativi e metteranno a disposizione i loro laboratori e competenze per offrire le loro competenze, attuando la terza  missione.
+Questa disponibilità e concreta partecipazione ai tavoli locali settoriali e generali per animare e guidare in co design i laboratori della Innovazione comunale sono una delle chiavi decisive per dare le risposte alla domanda di innovazione ovvero per rendere circolare il rapporto fra ricerca e società con fini e obiettivi condivisi e realmente utilizzabili nel breve medio e lungo periodo.</p>
+
+<h2 id="che-cosa--e-cosa-fa-la-rete-regionale-del-nodo-regionale-antenna-pon">Che cosa è e cosa fa la rete regionale del nodo regionale antenna pon</h2>
+
+<p>Il coordinamento regionale, che è parte organizzativa del Tavolo Regionale della Antenna Pon , è l’organismo di  garanzia e di promozione  di una visione ampia e condivisa del livello regionale delle iniziative e delle proposte che verranno dalle comunità e dai territori.
+Nel rispetto di ciascuna autonomia e identità locale  e territoriale il coordinamento regionale ha come fulcro istituzionale  il Tavolo regionale della antenna pon, a cui partecioa il MIUR.</p>
+
+<p><strong>Attiva iniziative</strong> coordinate nel livello regionale con la maggiore e migliore partecipazione delle realtà locali nella logica della valorizzazione del partenariato orizzontale, per rendere aperto e inclusivo il processo partecipativo.</p>
+
+<p><strong>Attiva cordate</strong> per la partecipazione ai bando regionali nazionali ed europei favorendo aggregazioni che hanno coerenza territoriale e specificità local, oltre ad essere strumento di negoziazione.</p>
+
+<p><strong>Attiva una iniziativa</strong> che vada a costituire l’anagrafe della ricerca e della innovazione in puglia con l’obiettivo di rendere disponibili i dati della attività svolte con la programmazione dei fondi strutturali in ricerca e innovazione 2007-2013 che siano disponibili all’utilizzazione di una utenza che può andare dal cittadino alle stesse imprese e università.</p>
+
+<h2 id="la-dimensione-interregionale-delle--antenne-regionali">La dimensione interregionale delle  antenne regionali</h2>
+<p>Valorizzare le esperienze delle singole comunità, dalle aree interne alle aree costiere, dalle piccole città alle grandi città che possono fra loro scambiare buone pratiche, e definire progetti che aabbiano una dimensione di interessi e obiettivi sovra regionali e nazionali favorendo lo scambio delle buone pratiche;</p>
+
+<p>L’accordo PON/POR terrà conto di queste indicazioni nel sancire poi la condivisione con la rete regionale</p>
+
+<h2 id="le-risorse-e-i-servizi-per-i-punti-informativi-e-la-rete">Le risorse e i servizi per i punti informativi e la rete</h2>
+<p>Il quadro delle risorse potranno rifersi a:
+* Il programma della comunicazione del pon nazionale
+* Il programma della comunicazione del po fesr regionale
+* I programmi attuativi dei programmi nazionali e regionali in ricerca e innovazione
+* I programmi attuativi degli altri programmi che contengono azioni e politiche pubbliche in ricerca e innovazione 
+* Programmi nazionali  e regionali  per capacity building della pubblica amministrazione</p>
+
+<h2 id="crono-programma">Crono-programma</h2>
+<p>Il primo ciclo del programma si attua nel triennio 2016-2018 ( a seguito dell’accordo PON/POR) e il secondo ciclo, fatta salva la verifica di metà programma anche attraverso l’AUDIT del CdS per l’attuazione del progetto-rete ,dal 2019 al 2021</p>
+
+
+	    
+
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            <a href="https://www.facebook.com/yourname" title="Facebook">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+		  
+          <li>
+            <a href="https://twitter.com/yourname" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	  
+      
+		  
+          <li>
+            <a href="mailto:youremail@domain.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+		  
+		  
+      
+      
+      
+      
+		  
+		  <li>
+			<a href="/feed.xml" title="RSS">
+			  <span class="fa-stack fa-lg">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+			  </span>
+			</a>
+		  </li>
+          
+        </ul>
+        <p class="copyright text-muted">
+		  Some Person
+		  &nbsp;&bull;&nbsp;
+		  2016
+
+		  
+		  &nbsp;&bull;&nbsp;
+		  <a href=""></a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/leaflet.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/moment.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery.rss.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/map.js"></script>
+    
+  
+
+
+<script src="https://mapzen.com/js/mapzen.min.js"></script>
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', '', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+  
+  </body>
+</html>
