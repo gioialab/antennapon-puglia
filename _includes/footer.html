@@ -133,6 +133,16 @@
             </a>
           </li>
           {% endif %}
+      {% if site.author.telegram and site.footer-links-active.telegram %}
+          <li>
+            <a href="http://telegram.me/{{ site.author.telegram }}" title="Spotify">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
 		  {% if site.footer-links-active.rss %}
 		  <li>
 			<a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="RSS">
@@ -157,7 +167,10 @@
 	        <!-- Please don't remove this, keep my open source work credited :) -->
 		<p class="theme-by text-muted">
 		  Developed by
+      <a href="https://twitter.com/comunegioialive" class="twitter-follow-button" data-show-count="false">Follow @comunegioialive</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> | <a href="https://twitter.com/gzileni" class="twitter-follow-button" data-show-count="false">Follow @gzileni</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <!--
 		  <a href="http://twitter.com/comunegioialive/">@comunegioialive</a>
+      -->
 		</p>
       </div>
     </div>
