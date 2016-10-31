@@ -70,38 +70,22 @@ $(function() {
 
 	    getRSS(marker.properties.rss, function (html, isFeed) {
 
+	    	var h;
+
     		if (isFeed) {
     			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_64.png)';
+    			h = html;
     		} else {
+    			h = marker.properties.title;
     			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/logo-antenna-pon-black_64.png)';
     		};
 
     		var popup = new mapboxgl.Popup({offset:[0, -30]})
-				.setHTML(marker.properties.title);
+				.setHTML(h);
 
 			addMarker(marker, el, popup);
     	});
 
-	    /*
-	    el.addEventListener('click', function() {
-
-	    	map.flyTo({center: marker.geometry.coordinates});
-
-	    	getRSS(marker.properties.rss, function (html, isFeed) {
-
-	    		if (isFeed) {
-	    			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_64.png)';
-	    		} else {
-	    			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/logo-antenna-pon-black_64.png)';
-	    		};
-
-	    		var popup = new mapboxgl.Popup({offset:[0, -30]})
-    				.setHTML(marker.properties.title);
-
-    			addMarker(marker, popup);
-	    	});
-	    });
-	    */
 	});
 
 	function addMarker(marker, el, popup) {
@@ -124,7 +108,7 @@ $(function() {
 
 				console.log('check entries founded ...');
 
-				var html = '<div class="media">';
+				var html = '<div class="list-group">';
 
 			    $(data).find("item").each(function () { // or "item" or whatever suits your feed
 			        
@@ -139,15 +123,7 @@ $(function() {
 			        var description = el.find("description").text().substring(0, LENGHT);
 			        var link = el.find("link").text();
 
-			        html += '<div class="media-left media-middle">' +
-	    					   '<a href="' + link + '" target="_blank">' + 
-	      					   '<img class="media-object" src="/img/LOGO-ANTENNAPON_64.jpg" alt="' + title + '">' +
-	    					   '</a>' +
-	    					   '</div>' +
-	  						   '<div class="media-body">'
-	    					   '<h4 class="media-heading">Middle aligned media</h4>' +
-	  						   '<p>' + description + '</p>' +
-	  						   '</div>';
+			        html += '<a href="' + link + '" class="list-group-item" target="_blank">' + title + '</a>';
 
 			        console.log("------------------------");
 			        console.log("title      : " + title);
