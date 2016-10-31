@@ -1,36 +1,21 @@
 $(function() {
 
+	var LENGHT = 150;
 	var center = [40.8030459,16.9299694];
 
+	// comuni della rete
 	var gioia = [16.9299694, 40.8030459];
 	var valenzano = [16.8666082, 41.0458656];
 	var gravina = [16.4074053, 40.8183414];
 
-	/*
-	var map = L.Mapzen.map('map');
-  	map.setView(center, 8);
-
-  	var geojsonFeature = {
-	    "type": "Feature",
-	    "properties": {
-	        "name": "Gioia del Clle",
-	        "amenity": "Nodo Antenna PON",
-	        "popupContent": "This is where the Rockies play!"
-	    },
-	    "geometry": {
-	        "type": "Point",
-	        "coordinates": center
-	    }
-	};
-	*/
-
+	// accessToken MapBox
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY29tdW5lZ2lvaWEiLCJhIjoiY2lyM2N1MzVkMDAxZWhzbnFka3IzcW8xNiJ9.01RuiMkZJs1XwEwMLOZLDw';
 	
 	var map = new mapboxgl.Map({
 	    container: 'map',
 	    style: 'mapbox://styles/mapbox/light-v9',
 	    center: gioia,
-	    zoom: 6
+	    zoom: 7
 	});
 
 	var geojson = {
@@ -43,8 +28,8 @@ $(function() {
             },
             "properties": {
                 "title": "Gioia del Colle",
-                "iconSize": [60,60]
-                "rss": "https://gioialab.github.io/feed.xml"
+                "iconSize": [64,64],
+                "rss": "https://gioialab.github.io/feed-antennapon.xml"
             }
         }, {
             "type": "Feature",
@@ -54,7 +39,7 @@ $(function() {
             },
             "properties": {
                 "title": "Valenzano",
-                "iconSize": [60,60]
+                "iconSize": [64,64],
                 "rss": ""
             }
         },
@@ -66,7 +51,7 @@ $(function() {
             },
             "properties": {
                 "title": "Gravina in Puglia",
-                "iconSize": [60,60]
+                "iconSize": [64,64],
                 "rss": ""
             }
         }
@@ -78,66 +63,111 @@ $(function() {
 	    // create a DOM element for the marker
 	    var el = document.createElement('div');
 	    el.className = 'marker';
-	    el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_60.png)';
 	    el.style.width = marker.properties.iconSize[0] + 'px';
 	    el.style.height = marker.properties.iconSize[1] + 'px';
 
+	    console.log('reading ' + marker.properties.rss);
+
+	    getRSS(marker.properties.rss, function (html, isFeed) {
+
+    		if (isFeed) {
+    			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_64.png)';
+    		} else {
+    			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/logo-antenna-pon-black_64.png)';
+    		};
+
+    		var popup = new mapboxgl.Popup({offset:[0, -30]})
+				.setHTML(marker.properties.title);
+
+			addMarker(marker, el, popup);
+    	});
+
+	    /*
 	    el.addEventListener('click', function() {
+
 	    	map.flyTo({center: marker.geometry.coordinates});
-	        // window.alert(marker.properties.title);
+
+	    	getRSS(marker.properties.rss, function (html, isFeed) {
+
+	    		if (isFeed) {
+	    			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_64.png)';
+	    		} else {
+	    			el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/logo-antenna-pon-black_64.png)';
+	    		};
+
+	    		var popup = new mapboxgl.Popup({offset:[0, -30]})
+    				.setHTML(marker.properties.title);
+
+    			addMarker(marker, popup);
+	    	});
 	    });
-	    
-	    // add marker to map
+	    */
+	});
+
+	function addMarker(marker, el, popup) {
+		// add marker to map
+		console.log('adding marker ...');
+
 	    new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
 	        .setLngLat(marker.geometry.coordinates)
+	        .setPopup(popup) 
 	        .addTo(map);
-	});
+	};
 
-	map.on('load', function () {
+	function getRSS(feed, callback) {
 
-	    // add geojson data as a new source
-	    map.addSource("symbols", {
-	        "type": "geojson",
-	        "data": geojson
-	    });
-
-	    map.addLayer({
-	        "id": "symbols",
-	        "type": "symbol",
-	        "source": "symbols",
-	        "paint": {}
-	    });
-
-	    map.on('click', function (e) {
-		    // Use queryRenderedFeatures to get features at a click event's point
-		    // Use layer option to avoid getting results from other layers
-		    var features = map.queryRenderedFeatures(e.point, { layers: ['symbols'] });
-		    // if there are features within the given radius of the click event,
-		    // fly to the location of the click event
-		    if (features.length) {
-		        // Get coordinates from the symbol and center the map on those coordinates
-		        map.flyTo({center: features[0].geometry.coordinates});
-		    }
-		});
-
-		map.on('mousemove', function (e) {
-		    var features = map.queryRenderedFeatures(e.point, { layers: ['symbols'] });
-		    map.getCanvas().style.cursor = features.length ? 'pointer' : '';
-		});
-
-	});
-
-	function getRSS(feed) {
+		var isFeed = false;
 
 		$.get(feed, function (data) {
-		    $(data).find("entry").each(function () { // or "item" or whatever suits your feed
-		        var el = $(this);
 
-		        console.log("------------------------");
-		        console.log("title      : " + el.find("title").text());
-		        console.log("author     : " + el.find("author").text());
-		        console.log("description: " + el.find("description").text());
-		    });
+			if ($(data).find("item")) {
+
+				console.log('check entries founded ...');
+
+				var html = '<div class="media">';
+
+			    $(data).find("item").each(function () { // or "item" or whatever suits your feed
+			        
+			    	console.log('entries founded ...');
+
+			        var el = $(this);
+
+			        isFeed = true;
+
+			        var title = el.find("title").text();
+			        var author = el.find("author").text();
+			        var description = el.find("description").text().substring(0, LENGHT);
+			        var link = el.find("link").text();
+
+			        html += '<div class="media-left media-middle">' +
+	    					   '<a href="' + link + '" target="_blank">' + 
+	      					   '<img class="media-object" src="/img/LOGO-ANTENNAPON_64.jpg" alt="' + title + '">' +
+	    					   '</a>' +
+	    					   '</div>' +
+	  						   '<div class="media-body">'
+	    					   '<h4 class="media-heading">Middle aligned media</h4>' +
+	  						   '<p>' + description + '</p>' +
+	  						   '</div>';
+
+			        console.log("------------------------");
+			        console.log("title      : " + title);
+			        console.log("author     : " + author);
+			        console.log("description: " + description);
+
+			    });
+
+			    html += '</div>';
+
+			    callback(html, isFeed);
+
+			} else {
+
+				console.log('entries not found ...');
+
+				callback("", isFeed);
+
+			}
+
 		});
 
 	}
