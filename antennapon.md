@@ -107,3 +107,37 @@ Il quadro delle risorse potranno rifersi a:
 
 ## Crono-programma
 Il primo ciclo del programma si attua nel triennio 2016-2018 ( a seguito dell’accordo PON/POR) e il secondo ciclo, fatta salva la verifica di metà programma anche attraverso l’AUDIT del CdS per l’attuazione del progetto-rete ,dal 2019 al 2021
+
+## Rete Antenna PON
+
+* [Gioia del Colle](http://gioialab.github.io)
+* Gravina
+* Rutigliano
+* Andria
+* Noci
+* Melpignano
+* Gallipoli
+* Statte
+* Laterza
+* Grottaglie
+* Mesagne
+* Brindisi
+* Modugno
+* Cisternino
+* Bitonto
+* Valenzano
+* Bari
+* Sannicandro
+* Acquaviva delle Fonti
+* Molfetta
+* Barletta
+* Rocchetta Sant'Antonio
+* Manfredonia
+* Poggio Imperiale
+* Troia
+* Pietramontecorvino
+* Orsara di Puglia
+* Ascoli Satriano
+* Città Metropolitana di Bari
+* Gal Colline Ioniche
+* Gal di Andria e Corato
