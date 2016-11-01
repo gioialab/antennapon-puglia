@@ -1,3 +1,3 @@
 # Rete Antenna PON Puglia
 
-![Installation steps]({{ site.url }}/img/antenna-pon.jpg)
+![Antenna PON](https://gioialab.github.io/antennapon-puglia/img/antenna-pon.jpg)
