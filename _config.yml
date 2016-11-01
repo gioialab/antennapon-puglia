@@ -111,6 +111,7 @@ share-links-active:
   google-plus: true
   linkedin: false
   telegram: true
+  rss: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
