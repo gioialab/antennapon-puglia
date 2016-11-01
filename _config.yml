@@ -23,7 +23,6 @@ description: Rete dei Comuni di Antenna PON
 
 # List of links in the navigation bar
 navbar-links:
-  Cos'è: "antennapon"
   Rete:
     - Vadevecum: "antennapon"
     - Antenna PON: "http://www.ponrec.it/ponri/"
