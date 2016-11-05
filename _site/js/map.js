@@ -319,7 +319,7 @@ $(function() {
                 "coordinates": rocchetta
             },
             "properties": {
-                "title": "Rocchetta",
+                "title": "Rocchetta Sant'Antonio",
                 "iconSize": [64,64],
                 "rss": ""
             }
