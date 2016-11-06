@@ -98,7 +98,7 @@ fb_app_id: "1313080358737062"
 
 # Excerpt Word Length
 # Truncates the excerpt to the specified number of words on the index page
-excerpt_length: 50
+excerpt_length: 140
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
