@@ -28,12 +28,13 @@ subtitle:
 
 <div class="posts-list">
 
-	<div align="center">
-		<blockquote class="twitter-tweet" data-lang="it"><p lang="it" dir="ltr">Sondaggio per il nome del nuovo dominio per la Rete Antenna PON Puglia <a href="https://t.co/A1hRXtfRBy">https://t.co/A1hRXtfRBy</a> <a href="https://twitter.com/hashtag/antennaponpuglia?src=hash">#antennaponpuglia</a></p>&mdash; Antenna PON Puglia (@netponpuglia) <a href="https://twitter.com/netponpuglia/status/794875799186903040">5 novembre 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-	</div>
-	<hr />
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfBMJnV8m8XhAFhFfe6tOkjsp2r3s7x_6rkrgXUGdfCVeRFw/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Caricamento in corso...</iframe>
 
-  {% for post in paginator.posts %}
+  {% include button.html name="Apri a tutto schermo" link="https://goo.gl/forms/OxujW0apeBVG8XGq2" %}
+
+  <hr />
+
+	{% for post in paginator.posts %}
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ post.title }}</h2>

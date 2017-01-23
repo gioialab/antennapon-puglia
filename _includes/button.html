@@ -1,0 +1,9 @@
+<div class="row" style="margin: 60px 0px 60px 0px">
+    <div class="col-xs-12 col-sm-12">
+    	{% if (include.site) %}
+    		<a class="btn btn-primary btn-block" target="_blank" href="{{ site.url }}/{{ include.link }}" role="button">{{ include.name }}</a>
+    	{% else %}
+			<a class="btn btn-primary btn-block" target="_blank" href="{{ include.link }}" role="button">{{ include.name }}</a>
+		{% endif %}
+	</div>
+</div>
