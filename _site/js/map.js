@@ -480,6 +480,59 @@ $(function() {
 
 		var isFeed = false;
 
+        $.ajax({
+            type: "GET",
+            url: feed,
+            dataType: "xml",
+            success: function (xml) {
+                
+                console.log(xml);
+
+                if ($(data).find("item")) {
+
+                    console.log('check entries founded ...');
+
+                    var html = '<div class="list-group">';
+
+                    $(data).find("item").each(function () { // or "item" or whatever suits your feed
+                        
+                        console.log('entries founded ...');
+
+                        var el = $(this);
+
+                        isFeed = true;
+
+                        var title = el.find("title").text();
+                        var author = el.find("author").text();
+                        var description = el.find("description").text().substring(0, LENGHT);
+                        var link = el.find("link").text();
+
+                        html += '<a href="' + link + '" class="list-group-item" target="_blank">' + title + '</a>';
+
+                        console.log("------------------------");
+                        console.log("title      : " + title);
+                        console.log("author     : " + author);
+                        console.log("description: " + description);
+
+                    });
+
+                    html += '</div>';
+
+                    callback(html, isFeed);
+
+                } else {
+
+                    console.log('entries not found ...');
+
+                    callback("", isFeed);
+
+                } 
+            }
+        });
+
+
+
+        /*
 		$.get(feed, function (data) {
 
 			if ($(data).find("item")) {
@@ -523,6 +576,7 @@ $(function() {
 			}
 
 		});
+        */
 
 	}
 
