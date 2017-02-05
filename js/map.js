@@ -484,9 +484,9 @@ $(function() {
             type: "GET",
             url: feed,
             dataType: "xml",
-            success: function (xml) {
+            success: function (data) {
                 
-                console.log(xml);
+                console.log(data);
 
                 if ($(data).find("item")) {
 
