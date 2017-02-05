@@ -58,7 +58,7 @@ $(function() {
             "properties": {
                 "title": "Gioia del Colle",
                 "iconSize": [64,64],
-                "rss": "https://gioialab.github.io/feed-antennapon.xml"
+                "link": "https://gioialab.github.io/"
             }
         }, {
             "type": "Feature",
@@ -69,7 +69,7 @@ $(function() {
             "properties": {
                 "title": "Valenzano",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -81,7 +81,7 @@ $(function() {
             "properties": {
                 "title": "Gravina in Puglia",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -93,7 +93,7 @@ $(function() {
             "properties": {
                 "title": "Rutigliano",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -105,7 +105,7 @@ $(function() {
             "properties": {
                 "title": "Andria",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -117,7 +117,7 @@ $(function() {
             "properties": {
                 "title": "Noci",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -129,7 +129,7 @@ $(function() {
             "properties": {
                 "title": "Melpignano",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -141,7 +141,7 @@ $(function() {
             "properties": {
                 "title": "Gallipoli",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -153,7 +153,7 @@ $(function() {
             "properties": {
                 "title": "Statte",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -165,7 +165,7 @@ $(function() {
             "properties": {
                 "title": "Laterza",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -177,7 +177,7 @@ $(function() {
             "properties": {
                 "title": "Grottaglie",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -189,7 +189,7 @@ $(function() {
             "properties": {
                 "title": "Mesagne",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -201,7 +201,7 @@ $(function() {
             "properties": {
                 "title": "Brindisi",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -213,7 +213,7 @@ $(function() {
             "properties": {
                 "title": "Modugno",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -225,7 +225,7 @@ $(function() {
             "properties": {
                 "title": "Cisternino",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -237,7 +237,7 @@ $(function() {
             "properties": {
                 "title": "Bitonto",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -249,7 +249,7 @@ $(function() {
             "properties": {
                 "title": "Valenzano",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -261,7 +261,7 @@ $(function() {
             "properties": {
                 "title": "Bari",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -273,7 +273,7 @@ $(function() {
             "properties": {
                 "title": "Sannicandro",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -285,7 +285,7 @@ $(function() {
             "properties": {
                 "title": "Acquaviva delle Fonti",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -297,7 +297,7 @@ $(function() {
             "properties": {
                 "title": "Molfetta",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -309,7 +309,7 @@ $(function() {
             "properties": {
                 "title": "Barletta",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -321,7 +321,7 @@ $(function() {
             "properties": {
                 "title": "Rocchetta Sant\'Antonio",
                 "iconSize": [64,64],
-                "rss": "http://log01.it/blog/feed/"
+                "link": "http://log01.it/blog"
             }
         },
         {
@@ -333,7 +333,7 @@ $(function() {
             "properties": {
                 "title": "Manfredonia",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -345,7 +345,7 @@ $(function() {
             "properties": {
                 "title": "Poggio Imperiale",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -357,7 +357,7 @@ $(function() {
             "properties": {
                 "title": "Troia",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -369,7 +369,7 @@ $(function() {
             "properties": {
                 "title": "Pietra Monte Corvino",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -381,7 +381,7 @@ $(function() {
             "properties": {
                 "title": "Orsara di Puglia",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -393,7 +393,7 @@ $(function() {
             "properties": {
                 "title": "Ascoli Satriano",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -405,7 +405,7 @@ $(function() {
             "properties": {
                 "title": "Città Metropolitana di bari",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -417,7 +417,7 @@ $(function() {
             "properties": {
                 "title": "Gal Colline Ioniche",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         },
         {
@@ -429,7 +429,7 @@ $(function() {
             "properties": {
                 "title": "Gal di Andria e Corato",
                 "iconSize": [64,64],
-                "rss": ""
+                "link": ""
             }
         }
 
@@ -444,9 +444,24 @@ $(function() {
 	    el.style.width = marker.properties.iconSize[0] + 'px';
 	    el.style.height = marker.properties.iconSize[1] + 'px';
 
-	    console.log('reading ' + marker.properties.rss);
+	    console.log('reading ' + marker.properties.link);
 
-	    getRSS(marker.properties.rss, function (html, isFeed) {
+        if (marker.properties.link) {
+            el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/LOGO-ANTENNAPON_64.png)';
+            
+            el.addEventListener('click', function() {
+                window.open(marker.properties.link,"_blank");
+            });
+
+            addMarker(marker, el);
+
+        } else {
+            el.style.backgroundImage = 'url(https://gioialab.github.io/antennapon-puglia/img/logo-antenna-pon-black_64.png)';
+            addMarker(marker, el);
+        }   
+
+        /*
+	    getRSS(marker.properties.link, function (html, isFeed) {
 
 	    	var h;
 
@@ -463,8 +478,21 @@ $(function() {
 
 			addMarker(marker, el, popup);
     	});
+        */
 
 	});
+
+    function addMarker(marker, el) {
+
+        // add marker to map
+        console.log('adding marker ...');
+
+        new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
+            .setLngLat(marker.geometry.coordinates)
+            .addTo(map);
+    };
+
+    /*
 
 	function addMarker(marker, el, popup) {
 		// add marker to map
@@ -472,7 +500,7 @@ $(function() {
 
 	    new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
 	        .setLngLat(marker.geometry.coordinates)
-	        .setPopup(popup) 
+	        .setPopup(popup)
 	        .addTo(map);
 	};
 
@@ -480,60 +508,7 @@ $(function() {
 
 		var isFeed = false;
 
-        $.ajax({
-            type: "GET",
-            url: feed,
-            dataType: "xml",
-            success: function (xml) {
-                
-                console.log(xml);
-
-                if ($(data).find("item")) {
-
-                    console.log('check entries founded ...');
-
-                    var html = '<div class="list-group">';
-
-                    $(data).find("item").each(function () { // or "item" or whatever suits your feed
-                        
-                        console.log('entries founded ...');
-
-                        var el = $(this);
-
-                        isFeed = true;
-
-                        var title = el.find("title").text();
-                        var author = el.find("author").text();
-                        var description = el.find("description").text().substring(0, LENGHT);
-                        var link = el.find("link").text();
-
-                        html += '<a href="' + link + '" class="list-group-item" target="_blank">' + title + '</a>';
-
-                        console.log("------------------------");
-                        console.log("title      : " + title);
-                        console.log("author     : " + author);
-                        console.log("description: " + description);
-
-                    });
-
-                    html += '</div>';
-
-                    callback(html, isFeed);
-
-                } else {
-
-                    console.log('entries not found ...');
-
-                    callback("", isFeed);
-
-                } 
-            }
-        });
-
-
-
-        /*
-		$.get(feed, function (data) {
+        $.get(feed, function (data) {
 
 			if ($(data).find("item")) {
 
@@ -576,9 +551,8 @@ $(function() {
 			}
 
 		});
-        */
 
 	}
-
+    */
 
 });
