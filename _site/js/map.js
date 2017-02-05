@@ -319,9 +319,9 @@ $(function() {
                 "coordinates": rocchetta
             },
             "properties": {
-                "title": "Rocchetta Sant'Antonio",
+                "title": "Rocchetta Sant\'Antonio",
                 "iconSize": [64,64],
-                "rss": ""
+                "rss": "http://log01.it/blog/feed/"
             }
         },
         {
